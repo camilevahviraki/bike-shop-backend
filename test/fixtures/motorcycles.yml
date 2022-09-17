@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  productID: 1
+  brand: MyString
+  model: MyString
+  year: MyString
+  image: MyString
+  booking_fee: 1
+
+two:
+  productID: 1
+  brand: MyString
+  model: MyString
+  year: MyString
+  image: MyString
+  booking_fee: 1
