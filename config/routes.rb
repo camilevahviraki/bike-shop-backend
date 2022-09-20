@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :category
       resources :motorcycle
-      resources :reservations
     end
   end
+  root "api/v1/motorcycle#index"
 end
