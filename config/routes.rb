@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: [:create]
       post '/login', to: 'users#login'
+      post '/create', to: 'users#create'
       resources :motorcycle
       resources :reservation
     end
