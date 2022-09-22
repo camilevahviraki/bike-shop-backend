@@ -1,7 +1,8 @@
 class Api::V1::MotorcycleController < ApplicationController
   before_action :authorize
+  before_action :set_motorcycle, only: %i[show update destroy]
   def index
-    @motorcycle = Motorcycle.all
+    @motorcycle = @user.motorcycles.all
     render json: @motorcycle
     # http://127.0.0.1:3000/api/v1/motorcycles
   end
@@ -12,15 +13,10 @@ class Api::V1::MotorcycleController < ApplicationController
     # http://127.0.0.1:3000/api/v1/motorcycles/1
   end
 
-  def new
-    @motorcycle = Motorcycle.new
-  end
-
   def create
-    @user = authorized_user
-    @motorcycle = Motorcycle.new(motorcycle_params)
+    @motorcycle = Motorcycle.new(motorcycle_params.merge(user: authorized_user))
     if @motorcycle.save
-      render json: @motorcycle
+      render json: @motorcycle, status: :created, location: root_url
       # http://127.0.0.1:3000/api/v1/motorcycles
     else
       render json: { error: 'Error creating motorcycle' }
