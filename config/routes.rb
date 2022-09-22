@@ -5,12 +5,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  # devise_for :users
+
 
   namespace :api do
     namespace :v1 do
-      resources :category
+      resources :users, only: [:create]
+      post '/login', to: 'users#login'
+      post '/create', to: 'users#create'
       resources :motorcycle
+      resources :reservation
     end
   end
   root "api/v1/motorcycle#index"

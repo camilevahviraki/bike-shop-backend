@@ -1,4 +1,5 @@
 class Api::V1::MotorcycleController < ApplicationController
+  before_action :authorize
   def index
     @motorcycle = Motorcycle.all
     render json: @motorcycle
@@ -16,6 +17,7 @@ class Api::V1::MotorcycleController < ApplicationController
   end
 
   def create
+    @user = authorized_user
     @motorcycle = Motorcycle.new(motorcycle_params)
     if @motorcycle.save
       render json: @motorcycle
@@ -33,6 +35,6 @@ class Api::V1::MotorcycleController < ApplicationController
   private
 
   def motorcycle_params
-    params.require(:motorcycle).permit(:brand, :model, :year, :image, :description, :booking_fee, :reserved)
+    params.permit(:brand, :model, :year, :image, :description, :booking_fee, :reserved)
   end
 end
