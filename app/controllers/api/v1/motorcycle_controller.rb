@@ -1,6 +1,5 @@
 class Api::V1::MotorcycleController < ApplicationController
-
-  before_action :authorize 
+  before_action :authorize
   # before_action :set_motorcycle, only: %i[show update destroy]
 
   def index
@@ -18,9 +17,9 @@ class Api::V1::MotorcycleController < ApplicationController
   def create
     @motorcycle = Motorcycle.new(motorcycle_params.merge(user: authorized_user))
     if @motorcycle.save
-      render json: {message: "Added succesfuly" }
+      render json: { message: 'Added succesfuly' }
     else
-      render json: {message: "Internal Server error. Please check your params"}
+      render json: { message: 'Internal Server error. Please check your params' }
     end
   end
 
