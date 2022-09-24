@@ -1,6 +1,7 @@
 class Api::V1::MotorcycleController < ApplicationController
   before_action :authorize
-  before_action :set_motorcycle, only: %i[show update destroy]
+  # before_action :set_motorcycle, only: %i[show update destroy]
+
   def index
     @motorcycle = @user.motorcycles.all
     render json: @motorcycle
@@ -16,10 +17,9 @@ class Api::V1::MotorcycleController < ApplicationController
   def create
     @motorcycle = Motorcycle.new(motorcycle_params.merge(user: authorized_user))
     if @motorcycle.save
-      render json: @motorcycle, status: :created, location: root_url
-      # http://127.0.0.1:3000/api/v1/motorcycles
+      render json: { message: 'Added succesfuly' }
     else
-      render json: { error: 'Error creating motorcycle' }
+      render json: { message: 'Internal Server error. Please check your params' }
     end
   end
 
@@ -31,6 +31,6 @@ class Api::V1::MotorcycleController < ApplicationController
   private
 
   def motorcycle_params
-    params.permit(:brand, :model, :year, :image, :description, :booking_fee, :reserved)
+    params.require(:motorcycle).permit(:user_id, :brand, :model, :year, :image, :description, :booking_fee, :reserved)
   end
 end
