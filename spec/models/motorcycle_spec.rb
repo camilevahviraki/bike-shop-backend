@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe Motorcycle, type: :model do
   before(:each) do
     @user = User.create!(username: 'Hammed', password_digest: 'abc@123')
-    @motorcycle = Motorcycle.new(user_id: @user.id, brand: 'Honda', model: 'CBR1000RR', year: '2021', description: 'Latest Model', booking_fee: 100)
+    @motorcycle = Motorcycle.new(user_id: @user.id, brand: 'Honda', model: 'CBR1000RR', year: '2021',
+                                 description: 'Latest Model', booking_fee: 100)
   end
 
   describe 'validations' do
