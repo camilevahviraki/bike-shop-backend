@@ -23,8 +23,8 @@ default: &default
 
 development:
   <<: *default
-  database: bike_shop_backend_development
-  username: postgres
+  database: bike_shop_backend_developments
+  username: 'HP'
   password: '1234'
 
 
