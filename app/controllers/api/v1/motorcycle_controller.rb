@@ -4,7 +4,7 @@ class Api::V1::MotorcycleController < ApplicationController
 
   def index
     @motorcycle = @user.motorcycles.all
-    render json: @motorcycle
+    render json: MotorcycleSerializer.new(@motorcycle).serializable_hash[:data].map { |hash| hash[:attributes] }
     # http://127.0.0.1:3000/api/v1/motorcycles
   end
 
