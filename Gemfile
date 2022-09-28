@@ -88,4 +88,3 @@ gem 'jsonapi-serializer'
 gem 'active_model_serializers'
 
 gem 'ffi'
-
