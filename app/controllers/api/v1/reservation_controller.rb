@@ -1,5 +1,5 @@
 class Api::V1::ReservationController < ApplicationController
-  # before_action :authorize
+  before_action :authorize
   def index
     @my_reserves = Motorcycle.left_outer_joins(:reservations) 
       .select('reservations.*, motorcycles.*, reservations.id as reservation_id, reservations.user_id as r_user_id')
@@ -37,6 +37,7 @@ class Api::V1::ReservationController < ApplicationController
     end
   end
 
+  private
   def reservation_params
     params.require(:reserve).permit(:user_id, :total_price, :start_date, :end_date, :city, :motorcycle_id)
   end
