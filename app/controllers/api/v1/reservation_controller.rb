@@ -3,13 +3,13 @@ class Api::V1::ReservationController < ApplicationController
   def index
     @my_reserves = Reservation.new
     render json: ReservesSerializer.new(@my_reserves.left_join_motorcycle).serializable_hash[:data]
-    .map { |hash| hash[:attributes]}
+      .map { |hash| hash[:attributes] }
   end
 
   def show
     @my_reserves = Reservation.new
     render json: ReservesSerializer.new(@my_reserves.left_joins_user(params[:id])).serializable_hash[:data]
-    .map { |hash| hash[:attributes] }
+      .map { |hash| hash[:attributes] }
   end
 
   def new
