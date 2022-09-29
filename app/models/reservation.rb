@@ -7,9 +7,9 @@ class Reservation < ApplicationRecord
       .select('reservations.*, motorcycles.*, reservations.id as reservation_id, reservations.user_id as r_user_id')
   end
 
-  def left_joins_user
+  def left_joins_user(id)
     Motorcycle.left_outer_joins(:reservations)
       .select('reservations.*, motorcycles.*, reservations.id as reservation_id, reservations.user_id as r_user_id')
-      .where("reservations.user_id = #{params[:id]}")
+      .where("reservations.user_id = #{id}")
   end
 end
