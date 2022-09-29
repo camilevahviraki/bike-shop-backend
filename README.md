@@ -1,12 +1,12 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Catalog Of My Things
+# Bike-Shop-BackEnd-App
 
-## _Microverse Rails API and React Final Group Capstone Project_
+A Bike Shop App developed using React for Front-End and Ruby on Rails for Back-End.
 
-> This is an educational project to create a console app that you to keep a record of different types of things you won: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below.
+![image](https://user-images.githubusercontent.com/91697183/192991047-32537abd-f1f1-4e7f-97fa-a9dbc1842304.png)
 
-![catalog_of_my_things](https://user-images.githubusercontent.com/98527559/182126086-fc6a58be-ce66-43cc-9a67-42ddf9633100.png)
+This is our Final React-Rails Capstone project in the Microverse curriculum.
 
 ## Learning Objectives 🔖
 
@@ -33,11 +33,11 @@
 - [x] Recognize the value of making equal contributions to group projects to produce the best outcome.
 - [x] Use empty Kanban board to manage tasks with team and own time on the project.
 
-
-
 ## Project Documentation 📄
 
-- [x] Here is the presentation video [link](https://drive.google.com/file/d/1Fi1Og-ZkgPK-UnpXF65DkXFkomawnbAF/view?usp=sharing)👈
+- [x] Here is the [Frontend Project Link](https://github.com/ger619/bike-shop-frontend)👈
+
+- [x] Here is the [Frontend Hosted Link](https://bike-shop-cmlx.netlify.app/)👈
 
 ## Built With 🛠️
 
@@ -75,7 +75,7 @@ Clone the repository using the GitHub link provided below.
 In the terminal, go to your file directory and run this command.
 
 ```
-$ git clone git@github.com:ger619/ruby-capstone.git
+$ git clone git@github.com:ger619/bike-shop-backend
 
 ```
 
@@ -113,35 +113,35 @@ $ rspec ./spec/#{filename}_spec.rb
 
 ## Authors
 
-👤 **Mavericks Balitaan** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
+👤 **Camile Vahviraki**
 
-- LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-mavericks--db-white?logo=LinkedIn&logoColor=0A66C2&style=plastic)](https://www.linkedin.com/in/mavericks-db/)
+- Github: [@camilevahviraki](https://github.com/camilevahviraki)
 
-- GitHub: [![GitHub Badge](https://img.shields.io/badge/-mavericks--db-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/mavericks-db)
+- LinkedIn: [Camile Vahviraki](https://www.linkedin.com/in/camile-vahviraki)
 
-- Twitter: [![Twitter Badge](https://img.shields.io/badge/-mavericks__db-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/mavericks_db)
+- Twitter: [Camile Vahviraki](https://twitter.com/CamileVahviraki)
 
-👤 **Nii Amanor Djoleto** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
+👤 **Abol Ger**
 
-- LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-nii--amanor--djoleto-white?logo=LinkedIn&logoColor=0A66C2&style=plastic)](https://linkedin.com/in/nii-amanor-djoleto)
+- Github: [@ger619](https://github.com/ger619)
 
-- GitHub: [![GitHub Badge](https://img.shields.io/badge/-ramrod433-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/ramrod433)
+- LinkedIn: [David Ger](https://linkedin.com/in/david-ger-426b4576)
 
-- Twitter: [![Twitter Badge](https://img.shields.io/badge/-__Djoleto-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/_djoleto_)
+- Twitter: [David Ger](https://twitter.com/ger_abol)
 
-👤 **Abol Ger** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
+👤 **Hammed Adisa**
 
-- LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-David%20Ger-white?logo=LinkedIn&logoColor=0A66C2&style=plastic)](https://linkedin.com/in/david-ger-426b4576)
+- Github: [@AbuRayhaan](https://github.com/AbuRayhaan)
 
-- GitHub: [![GitHub Badge](https://img.shields.io/badge/-ger619-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/ger619)
+- LinkedIn: [Adisa Hammed](https://www.linkedin.com/in/hammed-adisa/)
 
-- Twitter: [![Twitter Badge](https://img.shields.io/badge/-ger__abol-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/ger_abol)
+- Twitter: [@ayinla2011](https://twitter.com/Ayinla2011)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ger619/ruby-capstone/issues).
+Feel free to check the [issues page](https://github.com/ger619/bike-shop-backend/issues).
 
 ## Show your support
 
@@ -155,4 +155,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [MIT](https://github.com/ger619/bike-shop-backend/blob/last-reservations-update/LICENSE) licensed.
