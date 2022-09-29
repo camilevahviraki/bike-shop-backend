@@ -4,12 +4,12 @@ class Reservation < ApplicationRecord
 
   def left_join_motorcycle
     Motorcycle.left_outer_joins(:reservations)
-              .select('reservations.*, motorcycles.*, reservations.id as reservation_id, reservations.user_id as r_user_id')
+      .select('reservations.*, motorcycles.*, reservations.id as reservation_id, reservations.user_id as r_user_id')
   end
 
   def left_joins_user
     Motorcycle.left_outer_joins(:reservations)
-              .select('reservations.*, motorcycles.*, reservations.id as reservation_id, reservations.user_id as r_user_id')
-              .where("reservations.user_id = #{params[:id]}")
+      .select('reservations.*, motorcycles.*, reservations.id as reservation_id, reservations.user_id as r_user_id')
+      .where("reservations.user_id = #{params[:id]}")
   end
 end

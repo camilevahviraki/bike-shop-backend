@@ -2,12 +2,16 @@ class Api::V1::ReservationController < ApplicationController
   before_action :authorize
   def index
     @my_reserves = Reservation.new
-    render json: ReservesSerializer.new(@my_reserves.left_join_motorcycle).serializable_hash[:data].map { |hash| hash[:attributes] }
+    render json: ReservesSerializer.new(@my_reserves.left_join_motorcycle).serializable_hash[:data].map { |hash|
+                   hash[:attributes]
+                 }
   end
 
   def show
     @my_reserves = Reservation.new
-    render json: ReservesSerializer.new(@my_reserves.left_joins_user).serializable_hash[:data].map { |hash| hash[:attributes] }
+    render json: ReservesSerializer.new(@my_reserves.left_joins_user).serializable_hash[:data].map { |hash|
+                   hash[:attributes]
+                 }
   end
 
   def new
