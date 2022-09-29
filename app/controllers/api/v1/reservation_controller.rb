@@ -19,7 +19,7 @@ class Api::V1::ReservationController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(reservation_params.merge(user: authorized_user))
+    @reservation = Reservation.new(reservation_params)
     if @reservation.save
       render json: { message: 'Reserved successfully' }
     else
