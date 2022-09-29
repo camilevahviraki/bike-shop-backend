@@ -1,18 +1,13 @@
 class Api::V1::ReservationController < ApplicationController
   before_action :authorize
   def index
-    @my_reserves = Motorcycle.left_outer_joins(:reservations)
-      .select('reservations.*, motorcycles.*, reservations.id as reservation_id, reservations.user_id as r_user_id')
-
-    render json: ReservesSerializer.new(@my_reserves).serializable_hash[:data].map { |hash| hash[:attributes] }
+    @my_reserves = Reservation.new
+    render json: ReservesSerializer.new(@my_reserves.left_join_motorcycle).serializable_hash[:data].map { |hash| hash[:attributes] }
   end
 
   def show
-    @my_reserves = Motorcycle.left_outer_joins(:reservations)
-      .select('reservations.*, motorcycles.*, reservations.id as reservation_id, reservations.user_id as r_user_id')
-      .where("reservations.user_id = #{params[:id]}")
-
-    render json: ReservesSerializer.new(@my_reserves).serializable_hash[:data].map { |hash| hash[:attributes] }
+    @my_reserves = Reservation.new
+    render json: ReservesSerializer.new(@my_reserves.left_joins_user).serializable_hash[:data].map { |hash| hash[:attributes] }
   end
 
   def new
@@ -20,18 +15,18 @@ class Api::V1::ReservationController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.new(reservation_params)
+    @reservation = Reservation.new(reservation_params.merge(user: authorized_user))
     if @reservation.save
-      render json: { message: 'Reserved succesfuly' }
+      render json: { message: 'Reserved successfully' }
     else
-      render json: { message: 'Reservation failled, Please check your params!' }
+      render json: { message: 'Reservation failed, Please check your params!' }
     end
   end
 
   def destroy
     @reservation = Reservation.find(params[:id])
     if @reservation.destroy
-      render json: { message: 'Reserved canceled succesfuly!' }
+      render json: { message: 'Reserved canceled successfully!' }
     else
       render json: { message: 'Error while canceling reservation!' }
     end
