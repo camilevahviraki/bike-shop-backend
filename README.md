@@ -43,7 +43,7 @@ This is our Final React-Rails Capstone project in the Microverse curriculum.
 
 - [x] Programming Language: [Ruby](https://www.ruby-lang.org/en/)
 - [x] Linter: [Rubocop](https://rubocop.org/)
-- [x] VS Code
+- [x] VS Code or Rubymine
 
 ## Getting Started
 
@@ -70,6 +70,7 @@ $ ruby --version && irb
 
 Clone the repository using the GitHub link provided below.
 
+
 ### Install
 
 In the terminal, go to your file directory and run this command.
@@ -83,6 +84,8 @@ $ gem install bundler
 
 ```
 $ bundle install
+
+$ rails db:create db:migrate
 
 ```
 
@@ -98,8 +101,17 @@ To run tests, please run this command
 
 ```
 $ rspec ./spec/#{filename}_spec.rb
+
 ```
 
+## Run the app
+To run the app you need to run this command in the terminal
+
+```
+
+$ rails s
+
+```
 ## Authors
 
 👤 **Camile Vahviraki**
