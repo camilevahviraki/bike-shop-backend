@@ -81,6 +81,8 @@ test:
 # URL environment variable explicitly:
 #
   production:
+    username: camile
+    database: bike_shop_backend
     url: <%= ENV["BIKE_SHOP__DATABASE_URL"] %>
 
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
