@@ -80,14 +80,14 @@ test:
 # the values provided in this file. Alternatively, you can specify a connection
 # URL environment variable explicitly:
 #
-#   production:
-#     url: <%= ENV["MY_APP_DATABASE_URL"] %>
-#
+  production:
+    url: <%= ENV["MY_APP_DATABASE_URL"] %>
+
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-production:
-  <<: *default
-  database: bike_shop_backend_production
-  username: postgres
-  password: <%= ENV["BIKE_SHOP_BACKEND_DATABASE_PASSWORD"] %>
+# production:
+#   <<: *default
+#   database: bike_shop_backend_production
+#   username: postgres
+#   password: <%= ENV["BIKE_SHOP_BACKEND_DATABASE_PASSWORD"] %>
