@@ -80,10 +80,8 @@ test:
 # the values provided in this file. Alternatively, you can specify a connection
 # URL environment variable explicitly:
 #
-  production:
-    username: camile
-    database: bike_shop_backend
-    url: <%= ENV["BIKE_SHOP__DATABASE_URL"] %>
+production:
+  url: <%= ENV["BIKE_SHOP__DATABASE_URL"] %>
 
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
